@@ -1,0 +1,144 @@
+// Class for text type inputs
+.text-field {
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    border: solid 2px transparent;
+    font-size: 18px;
+    font-weight: 500;
+
+    &::placeholder {
+        color: var(--black);
+        opacity: 0.5;
+    }
+}
+
+
+// =========================================
+
+
+
+
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px 50px;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.tasks-title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 70px;
+    text-align: center;
+    color: var(--dark);
+}
+
+.tasks-form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    &__input {
+        @extend .text-field;
+        padding: 0px 10px;
+        background-color: var(--white);
+    }
+
+
+    &__btn {
+        width: 150px;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        border: solid 1px var(--dark);
+        transition: all 0.2s linear;
+
+        &:hover {
+            color: var(--white);
+            background-color: var(--dark);
+        }
+    }
+}
+
+.tasks-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: solid 3px var(--dark);
+    border-radius: 15px;
+
+    &__header {
+        &-row {
+            border-bottom: solid 1px var(--dark);
+        }
+
+        &-col {
+            text-align: start;
+            padding: 10px;
+            border-left: solid 1px var(--dark);
+        }
+    }
+
+    &__body {
+        &-row {
+            border-bottom: solid 1px var(--dark);
+        }
+
+        &-col {
+            width: 300px;
+            height: 60px;
+            position: relative;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 0px 10px;
+            border-left: solid 1px var(--dark);
+
+            &>input[type="text"] {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                font-weight: 500;
+                font-size: 18px;
+
+            }
+        }
+    }
+
+    &__btn {
+        width: 200px;
+        height: 30px;
+        background-color: var(--danger);
+        padding: 5px;
+        color: var(--white);
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500px;
+    }
+
+    &__checkbox {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}
+
+.no-data {
+    font-size: 80px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--dark);
+
+}
+
+.error {
+    border: solid 2px var(--danger);
+}
+
+.tips {
+    color: var(--danger);
+}
